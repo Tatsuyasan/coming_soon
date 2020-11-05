@@ -9,23 +9,22 @@
 }
 
 body {
-    background-color: black;
     font-family: MonumentExtended-regular, serif;
 }
 
 @font-face {
     font-family: "MonumentExtended-black";
-    src: url("/fonts/MonumentExtended-Black.otf") format("otf"), url("/fonts/MonumentExtended-Black.ttf") format("truetype");
+    src: url("/assets/fonts/MonumentExtended-Black.otf") format("otf"), url("/assets/fonts/MonumentExtended-Black.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "MonumentExtended-light";
-    src: url("/fonts/MonumentExtended-Light.otf") format("otf"), url("/fonts/MonumentExtended-Light.ttf") format("truetype");
+    src: url("/assets/fonts/MonumentExtended-Light.otf") format("otf"), url("/assets/fonts/MonumentExtended-Light.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "MonumentExtended-regular";
-    src: url("/fonts/MonumentExtended-Regular.otf") format("otf"), url("/fonts/MonumentExtended-Regular.ttf") format("truetype");
+    src: url("/assets/fonts/MonumentExtended-Regular.otf") format("otf"), url("/assets/fonts/MonumentExtended-Regular.ttf") format("truetype");
 }
 
 
@@ -39,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    overflow: hidden;
     -webkit-user-select: none;
 }
 
@@ -54,8 +54,8 @@ body {
 .logo p {
     z-index: 999;
     display: inline-block;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 50px; //25px
+    line-height: 50px; //25px
     animation: fadeInLogo 3000ms ease-in-out forwards;
 }
 
@@ -80,6 +80,8 @@ body {
 }
 
 .description {
+    z-index: 999;
+    position: relative;
     overflow-y: hidden;
     text-transform: uppercase;
     text-align: right;
@@ -159,34 +161,4 @@ body {
     transition: bottom .15s;
 }
 
-
-/* ANIMATION */
-
-@keyframes fadeInLogo {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInToTop {
-    from {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes textEffect {
-    from {
-        bottom: 0;
-    }
-    to {
-        bottom: -15px;
-    }
-}
+@import './keyframes.scss';

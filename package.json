@@ -1,0 +1,34 @@
+{
+    "name": "coming_soon2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "webpack": "^5.4.0"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.12.1",
+        "autoprefixer": "^9.8.6",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "parcel-bundler": "^1.12.4",
+        "postcss": "^8.1.6",
+        "sass": "^1.29.0"
+    },
+    "scripts": {
+        "dev": "parcel index.html --open",
+        "build": "parcel build index.html",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tatsuyasan/coming_soon.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Tatsuyasan/coming_soon/issues"
+    },
+    "homepage": "https://github.com/Tatsuyasan/coming_soon#readme"
+}

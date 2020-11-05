@@ -1,3 +1,5 @@
+import '../css/app.scss'
+
 function mouseOverEffectTranslate() {
     const description = document.querySelector('.description');
     const div = description.querySelector(':scope > div');
