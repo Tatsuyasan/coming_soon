@@ -17,7 +17,7 @@ function mouseOverEffectDuplicate() {
     const links = document.querySelectorAll('.navigation nav div a');
     const duplicateTexts = document.querySelectorAll('.navigation nav div p.text-effect');
     const hoverEffect = function(e, el) {
-        el.style.bottom = "-5px";
+        el.style.bottom = "-3px";
     }
     const hoverEffectReverse = function(e, el) {
         el.style.bottom = "0";

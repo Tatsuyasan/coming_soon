@@ -1,25 +1,20 @@
 /* GENERAL */
 
+$background-color:black;
+$typo-color: white;
+$font-size-logo: 30px;
+$font-size-description: 15px;
+$font-size-links: 10px;
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: $typo-color;
     text-transform: uppercase;
 }
 
 body {
     font-family: MonumentExtended-regular, serif;
-}
-
-@font-face {
-    font-family: "MonumentExtended-black";
-    src: url("/assets/fonts/MonumentExtended-Black.otf") format("otf"), url("/assets/fonts/MonumentExtended-Black.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "MonumentExtended-light";
-    src: url("/assets/fonts/MonumentExtended-Light.otf") format("otf"), url("/assets/fonts/MonumentExtended-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -37,7 +32,7 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $background-color;
     overflow: hidden;
     -webkit-user-select: none;
 }
@@ -54,8 +49,8 @@ body {
 .logo p {
     z-index: 999;
     display: inline-block;
-    font-size: 50px; //25px
-    line-height: 50px; //25px
+    font-size: $font-size-logo; //25px
+    line-height: $font-size-logo; //25px
     animation: fadeInLogo 3000ms ease-in-out forwards;
 }
 
@@ -68,7 +63,7 @@ body {
     width: 100%;
     height: 48%;
     background-color: black;
-    margin-bottom: 9px;
+    margin-bottom: 5px;
 }
 
 .logo p.text-effect {
@@ -76,7 +71,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    animation: fadeInLogo 3000ms ease-in-out forwards, textEffect 1000ms ease-out 1000ms forwards;
+    animation: fadeInLogo 3000ms ease-in-out 1000ms forwards, textEffect 1000ms ease 2000ms forwards;
 }
 
 .description {
@@ -87,7 +82,7 @@ body {
     text-align: right;
     max-height: 22px;
     line-height: 26px;
-    font-size: 20px;
+    font-size: $font-size-description;
     margin: 10px 0 50px 0;
 }
 
@@ -131,7 +126,8 @@ body {
 .navigation nav div p.text-effect {
     text-transform: uppercase;
     text-decoration: none;
-    line-height: 15px;
+    line-height: $font-size-links;
+    font-size: $font-size-links;
 }
 
 .navigation nav div a {
