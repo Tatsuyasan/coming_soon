@@ -9,11 +9,13 @@
 
 @keyframes fadeInToTop {
     from {
+        visibility: hidden;
         transform: translateY(-10px);
         opacity: 0;
     }
     to {
         transform: translateY(0);
+        visibility: visible;
         opacity: 1;
     }
 }
@@ -23,7 +25,7 @@
         bottom: 0;
     }
     to {
-        bottom: -6px;
+        bottom: -10px;
     }
 }
 

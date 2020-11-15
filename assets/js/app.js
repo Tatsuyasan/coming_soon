@@ -28,5 +28,44 @@ function mouseOverEffectDuplicate() {
     }
 }
 
+function colorEffect() {
+    const indexColor = {
+        light: 0,
+        dark: 1
+    }
+    const documentEl = document.documentElement;
+    const buttons = document.querySelectorAll('.container-color-mode div');
+
+    const changeColor = function(e, el) {
+        if (el.classList.value == "light") {
+            documentEl.style.setProperty("--main-background-color", "white");
+            documentEl.style.setProperty("--main-typo-color", "black");
+        } else if (el.classList.value == "black") {
+            documentEl.style.setProperty("--main-background-color", "black");
+            documentEl.style.setProperty("--main-typo-color", "white");
+        }
+    }
+
+    const animationToggle = function(e, index) {
+        for (let k = 0; k < buttons.length; k++) {
+            if (index == indexColor.light) {
+                buttons[index].style.transform = "translateY(20px)";
+                buttons[indexColor.dark].style.transform = "translateY(-15px)";
+            } else if (index == indexColor.dark) {
+                buttons[index].style.transform = "translateY(0px)";
+                buttons[indexColor.light].style.transform = "translateY(0px)";
+            }
+        }
+    }
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(e) {
+            changeColor(e, buttons[i]);
+            animationToggle(e, i);
+        });
+    }
+}
+
 mouseOverEffectTranslate();
 mouseOverEffectDuplicate();
+colorEffect();

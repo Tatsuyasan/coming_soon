@@ -1,20 +1,27 @@
 /* GENERAL */
 
-$background-color:black;
-$typo-color: white;
+:root {
+    --main-background-color: black;
+    --main-typo-color: white;
+}
+
 $font-size-logo: 30px;
-$font-size-description: 15px;
+$line-height-logo: 23px;
+$font-size-description: 10px;
 $font-size-links: 10px;
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $typo-color;
+    color: var(--main-typo-color);
     text-transform: uppercase;
 }
 
 body {
     font-family: MonumentExtended-regular, serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 @font-face {
@@ -30,10 +37,9 @@ body {
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: $background-color;
-    overflow: hidden;
+    background-color: var(--main-background-color);
     -webkit-user-select: none;
 }
 
@@ -43,14 +49,14 @@ body {
     flex-flow: column nowrap;
     position: relative;
     text-align: right;
-    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .logo p {
     z-index: 999;
     display: inline-block;
     font-size: $font-size-logo; //25px
-    line-height: $font-size-logo; //25px
+    line-height: $line-height-logo; //25px
     animation: fadeInLogo 3000ms ease-in-out forwards;
 }
 
@@ -61,9 +67,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 48%;
-    background-color: black;
-    margin-bottom: 5px;
+    height: 58%;
+    background-color: var(--main-background-color);
+    margin-bottom: 0;
 }
 
 .logo p.text-effect {
@@ -83,7 +89,7 @@ body {
     max-height: 22px;
     line-height: 26px;
     font-size: $font-size-description;
-    margin: 10px 0 50px 0;
+    margin: 7px 0 50px 0;
 }
 
 .description div {
@@ -119,7 +125,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--main-background-color);
 }
 
 .navigation nav div a,
@@ -155,6 +161,21 @@ body {
     bottom: 0;
     right: 0;
     transition: bottom .15s;
+}
+
+
+/* COLOR MODE */
+
+.container-color-mode {
+    align-self: flex-end;
+    overflow: hidden;
+    height: 10px;
+    font-size: $font-size-links;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+    div {
+        transition: transform 0.4s;
+    }
 }
 
 @import './keyframes.scss';
