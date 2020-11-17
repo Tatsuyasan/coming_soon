@@ -172,10 +172,13 @@ body {
     height: 10px;
     font-size: $font-size-links;
     margin: 0 10px 10px 0;
+    opacity: 0;
     cursor: pointer;
     div {
         transition: transform 0.4s;
     }
+    animation: fadeInToTop 700ms ease-in-out forwards;
+    animation-delay: 3600ms;
 }
 
 @import './keyframes.scss';

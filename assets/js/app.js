@@ -13,7 +13,7 @@ function mouseOverEffectTranslate() {
     description.addEventListener('mouseout', (e) => { animationTextReverse(e); });
 }
 
-function mouseOverEffectDuplicate() {
+function mouseOverEffectLinks() {
     const links = document.querySelectorAll('.navigation nav div a');
     const duplicateTexts = document.querySelectorAll('.navigation nav div p.text-effect');
     const hoverEffect = function(e, el) {
@@ -50,7 +50,7 @@ function colorEffect() {
         for (let k = 0; k < buttons.length; k++) {
             if (index == indexColor.light) {
                 buttons[index].style.transform = "translateY(20px)";
-                buttons[indexColor.dark].style.transform = "translateY(-15px)";
+                buttons[indexColor.dark].style.transform = "translateY(-13px)";
             } else if (index == indexColor.dark) {
                 buttons[index].style.transform = "translateY(0px)";
                 buttons[indexColor.light].style.transform = "translateY(0px)";
@@ -67,5 +67,7 @@ function colorEffect() {
 }
 
 mouseOverEffectTranslate();
-mouseOverEffectDuplicate();
+setTimeout(function() {
+    mouseOverEffectLinks();
+}, 3600);
 colorEffect();
